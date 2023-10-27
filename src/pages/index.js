@@ -2,6 +2,7 @@ import Head from 'next/head'
 
 import { Inter } from 'next/font/google'
 import { Text } from '@chakra-ui/react'
+import AnimatedSection from '@/components/AnimatedSection'
 
 const inter = Inter({ subsets: ['latin'] })
 
