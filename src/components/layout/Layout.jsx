@@ -5,7 +5,7 @@ import { Container } from '@chakra-ui/react'
 
 const Layout = ({ children }) => {
   return (
-    <Container>
+    <Container maxW='3xl'>
       <Navbar />
       {children}
       <Footer />

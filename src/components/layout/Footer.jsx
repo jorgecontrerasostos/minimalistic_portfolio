@@ -1,5 +1,13 @@
 import React from 'react'
-import { Box, Text, Stack, Icon, Container, Divider } from '@chakra-ui/react'
+import {
+  Box,
+  Text,
+  Stack,
+  Icon,
+  Container,
+  Divider,
+  Flex
+} from '@chakra-ui/react'
 import { FaLinkedin } from 'react-icons/fa'
 import { SiBuymeacoffee } from 'react-icons/si'
 import { FaXTwitter } from 'react-icons/fa6'
@@ -7,16 +15,20 @@ import { Link } from '@chakra-ui/next-js'
 import { motion } from 'framer-motion'
 const Footer = () => {
   return (
-    <Box>
-      <Divider mt={6} borderColor='gray.600' />
-      <Container
+    <Box as='footer'>
+      <Divider mt={4} borderColor='gray.300' w='100%' />
+      <Flex
         as={Stack}
         py={4}
-        direction={{ base: 'column', md: 'row' }}
-        justify={{ base: 'center', md: 'space-between' }}
-        align={{ base: 'center', md: 'center' }}
+        direction='column'
+        align='center'
+        spacing={4}
+        w='3xl'
       >
-        <Text>© 2023 Jorge Contreras. Made with &#x2764;</Text>
+        <Text>
+          © 2023 Jorge Contreras. Made with &#x2764; all the way from
+          &#x1F1F2;&#x1F1FD;
+        </Text>
         <Stack direction={'row'} spacing={6}>
           <Link
             href='https://www.linkedin.com/in/jorge-contreras-ostos/'
@@ -40,7 +52,7 @@ const Footer = () => {
             </motion.div>
           </Link>
         </Stack>
-      </Container>
+      </Flex>
     </Box>
   )
 }

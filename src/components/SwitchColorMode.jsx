@@ -10,6 +10,7 @@ const SwitchColorMode = () => {
         isChecked={colorMode === 'dark'}
         onChange={toggleColorMode}
         colorScheme='customSwitchColors'
+        boxSize={6}
       />
     </motion.div>
   )
