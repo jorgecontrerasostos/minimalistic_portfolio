@@ -13,7 +13,11 @@ import { toolboxData } from '@/data/toolboxData'
 const Toolbox = () => {
   return (
     <Box>
-      <Heading as='h2' fontSize='1.8em'>
+      <Heading
+        as='h2'
+        fontSize='1.8em'
+        textAlign={['center', 'center', 'center', 'left', 'left', 'left']}
+      >
         My Toolbox
       </Heading>
       <Grid templateColumns='repeat(3, 1fr)' gap={6} py={4}>

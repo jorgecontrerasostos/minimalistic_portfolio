@@ -9,39 +9,19 @@ import {
   VStack,
   Flex,
   Icon,
-  Divider,
   useColorModeValue
 } from '@chakra-ui/react'
 
-import JustiaIcon from '../components/JustiaIcon'
-
-const jobs = [
-  {
-    id: crypto.randomUUID(),
-
-    title: 'Web Services Associate',
-    icon: JustiaIcon,
-    description: `In this position I handle different tasks but primarly migrating client's websites to our new platform.`,
-    date: 'June 2021 - Present'
-  },
-  {
-    id: crypto.randomUUID(),
-
-    title: 'Web Services Intern',
-    icon: JustiaIcon,
-    description: `During my internship I was part of the Help Desk Team performing tasks such as small tweaks for client sites, among others.`,
-    date: 'January 2021 - June 2021'
-  }
-]
+import { jobs } from '../data/jobs'
 
 const Timeline = () => {
   return (
     <>
       <Container maxWidth='4xl' p={{ base: 2, sm: 10 }}>
-        {jobs.map((milestone, index) => (
+        {jobs.map((job, index) => (
           <Flex key={index} mb='6px' mt='-4'>
             <LineWithDot />
-            <Card {...milestone} />
+            <Card {...job} />
           </Flex>
         ))}
       </Container>
@@ -49,9 +29,10 @@ const Timeline = () => {
   )
 }
 
-const Card = ({ title, description, icon, date }) => {
+const Card = ({ title, description, icon, date, link }) => {
   return (
     <HStack
+      my={4}
       p={{ base: 3, sm: 6 }}
       bg={useColorModeValue('gray.100', 'gray.800')}
       spacing={5}
@@ -83,10 +64,12 @@ const Card = ({ title, description, icon, date }) => {
             lineHeight={1.2}
             fontWeight='bold'
             w='100%'
+            href={link}
+            target='_blank'
           >
             {title}
           </chakra.h1>
-          <Text fontSize='1em' noOfLines={2}>
+          <Text fontSize='1em' noOfLines={0}>
             {description}
           </Text>
         </VStack>
@@ -98,7 +81,12 @@ const Card = ({ title, description, icon, date }) => {
 
 const LineWithDot = () => {
   return (
-    <Flex pos='relative' alignItems='center' mr='40px'>
+    <Flex
+      pos='relative'
+      alignItems='center'
+      mr='40px'
+      display={['none', 'none', 'flex']}
+    >
       <chakra.span
         position='absolute'
         left='50%'

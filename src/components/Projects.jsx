@@ -7,7 +7,7 @@ import {
   Text,
   Stack,
   Icon,
-  Divider
+  Box
 } from '@chakra-ui/react'
 import { motion } from 'framer-motion'
 import { projects } from '../data/projects'
@@ -15,8 +15,13 @@ import { BsGithub, BsArrowUpRightSquare } from 'react-icons/bs'
 
 const Projects = () => {
   return (
-    <>
-      <Heading fontSize='1.8em' as='h2'>
+    <Box mb={-4} mt={4}>
+      <Heading
+        fontSize='1.8em'
+        as='h2'
+        mb={-4}
+        textAlign={['center', 'center', 'center', 'left', 'left', 'left']}
+      >
         Projects
       </Heading>
       {projects.map((project) => {
@@ -37,7 +42,17 @@ const Projects = () => {
               </Flex>
               <Flex p={8} flex={1} align={'center'} justify={'center'}>
                 <Stack spacing={6} w={'full'} maxW={'lg'}>
-                  <Heading fontSize={{ base: '3xl', md: '4xl', lg: '1.7em' }}>
+                  <Heading
+                    fontSize={{ base: '3xl', md: '4xl', lg: '1.7em' }}
+                    textAlign={[
+                      'center',
+                      'center',
+                      'center',
+                      'left',
+                      'left',
+                      'left'
+                    ]}
+                  >
                     <Text>{project.name}</Text>
                   </Heading>
                   <Text fontSize={{ base: 'md', lg: 'lg' }} color={'gray.500'}>
@@ -65,7 +80,10 @@ const Projects = () => {
           </div>
         )
       })}
-    </>
+      <Box textAlign='center' pb={6}>
+        <Text as='p'>More projects coming soon...</Text>
+      </Box>
+    </Box>
   )
 }
 

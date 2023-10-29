@@ -8,7 +8,8 @@ import {
   Image,
   Divider,
   ButtonGroup,
-  Button
+  Button,
+  Link
 } from '@chakra-ui/react'
 
 const IMAGE_PATH = '/profile.jpg'
@@ -37,14 +38,21 @@ const Hero = () => {
               justifyContent={[
                 'center',
                 'center',
-                'center',
+                'start',
                 'start',
                 'start',
                 'start'
               ]}
             >
-              <Button colorScheme='facebook'>email me!</Button>
-              <Button colorScheme='linkedin'>let&apos;s connect!</Button>
+              <Link href='mailto:jorgecontrerasostos@gmail.com'>
+                <Button colorScheme='facebook'>email me!</Button>
+              </Link>
+              <Link
+                href='https://www.linkedin.com/in/jorge-contreras-ostos/'
+                target='_blank'
+              >
+                <Button colorScheme='linkedin'>let&apos;s connect!</Button>
+              </Link>
             </ButtonGroup>
           </Stack>
         </Box>

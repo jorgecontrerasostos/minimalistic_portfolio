@@ -22,6 +22,7 @@ const Navbar = () => {
         gap='2'
         justifyContent='space-between'
         py={4}
+        px={[4, 2, 0, 0, 0, 0]}
       >
         <Box p='2' display={['flex', 'flex', 'flex', 'flex', 'flex', 'flex']}>
           <Link href='/'>

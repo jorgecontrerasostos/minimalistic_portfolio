@@ -17,15 +17,8 @@ const Footer = () => {
   return (
     <Box as='footer'>
       <Divider mt={4} borderColor='gray.300' w='100%' />
-      <Flex
-        as={Stack}
-        py={4}
-        direction='column'
-        align='center'
-        spacing={4}
-        w='3xl'
-      >
-        <Text>
+      <Flex as={Stack} py={4} direction='column' align='center' spacing={4}>
+        <Text align='center'>
           © 2023 Jorge Contreras. Made with &#x2764; all the way from
           &#x1F1F2;&#x1F1FD;
         </Text>
