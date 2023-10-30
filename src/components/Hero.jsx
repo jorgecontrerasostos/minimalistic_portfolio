@@ -44,12 +44,16 @@ const Hero = () => {
                 'start'
               ]}
             >
-              <Link href='mailto:jorgecontrerasostos@gmail.com'>
+              <Link
+                href='mailto:jorgecontrerasostos@gmail.com'
+                textDecor='none'
+              >
                 <Button colorScheme='facebook'>email me!</Button>
               </Link>
               <Link
                 href='https://www.linkedin.com/in/jorge-contreras-ostos/'
                 target='_blank'
+                textDecor='none'
               >
                 <Button colorScheme='linkedin'>let&apos;s connect!</Button>
               </Link>
