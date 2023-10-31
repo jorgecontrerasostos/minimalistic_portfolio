@@ -3,6 +3,7 @@ import Hero from '@/components/Hero'
 import WorkExperience from '@/components/WorkExperience'
 import Toolbox from '@/components/Toolbox'
 import Projects from '@/components/Projects'
+import ThankYouSection from '@/components/ThankYouSection'
 
 export default function Home() {
   return (
@@ -17,10 +18,10 @@ export default function Home() {
         <link rel='icon' href='/favicon.ico' />
       </Head>
       <Hero />
-
       <WorkExperience />
       <Toolbox />
       <Projects />
+      <ThankYouSection />
     </>
   )
 }

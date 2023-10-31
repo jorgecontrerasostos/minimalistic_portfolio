@@ -23,9 +23,10 @@ export const jobs = [
   {
     id: crypto.randomUUID(),
 
-    title: 'Checkout Line Supervisor',
+    title: 'Checkout Line Supervisor - Costco',
     icon: CostcoIcon,
     description: `I was in charge of the check out line at Costco. It really enjoyed working there.`,
-    date: 'June 2018 - June 2021'
+    date: 'June 2018 - June 2021',
+    link: 'https://www.costco.com/'
   }
 ]

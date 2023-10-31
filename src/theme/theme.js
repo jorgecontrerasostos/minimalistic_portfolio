@@ -6,13 +6,17 @@ const theme = extendTheme({
     initialColorMode: 'dark',
     useSystemColorMode: false
   },
+  fonts: {
+    heading: `'JetBrains Mono', sans-serif`,
+    body: `'JetBrains Mono', sans-serif`
+  },
   colors: {
     light: {
-      background: 'white' // Light mode background color
+      background: '#F7F7FF' // Light mode background color
     },
     dark: {
       background: 'black', // Dark mode background color
-      overriddenBackground: '#11151C' // Override the dark mode background color
+      overriddenBackground: '#070600' // Override the dark mode background color
     },
     customSwitchColors: {
       100: '#13B0CF',

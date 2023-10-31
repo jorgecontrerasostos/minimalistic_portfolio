@@ -9,7 +9,8 @@ const WorkExperience = () => {
         as='h2'
         fontSize='1.8em'
         textAlign={['center', 'center', 'center', 'left', 'left', 'left']}
-        mb={2}
+        mb={[0, -6, -6, 0, 0, 0]}
+        letterSpacing='tight'
       >
         Work Experience
       </Heading>

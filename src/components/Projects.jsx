@@ -12,8 +12,12 @@ import {
 import { motion } from 'framer-motion'
 import { projects } from '../data/projects'
 import { BsGithub, BsArrowUpRightSquare } from 'react-icons/bs'
+import { useColorMode } from '@chakra-ui/react'
 
 const Projects = () => {
+  const { colorMode } = useColorMode()
+  const textColor = colorMode === 'light' ? 'gray.600' : 'gray.500'
+
   return (
     <Box mb={-4} mt={4}>
       <Heading
@@ -21,6 +25,7 @@ const Projects = () => {
         as='h2'
         mb={-4}
         textAlign={['center', 'center', 'center', 'left', 'left', 'left']}
+        letterSpacing='tight'
       >
         Projects
       </Heading>
@@ -36,6 +41,7 @@ const Projects = () => {
                       objectFit={'cover'}
                       src={project.image}
                       borderRadius='lg'
+                      shadow='lg'
                     />
                   </motion.div>
                 </Link>
@@ -52,16 +58,18 @@ const Projects = () => {
                       'left',
                       'left'
                     ]}
+                    letterSpacing='tight'
                   >
                     <Text>{project.name}</Text>
                   </Heading>
-                  <Text fontSize={{ base: 'md', lg: 'lg' }} color={'gray.500'}>
+
+                  <Text fontSize={{ base: 'md', lg: 'lg' }} color={textColor}>
                     {project.description}
                   </Text>
                   <Stack
                     direction={{ base: 'row', md: 'row' }}
                     spacing={4}
-                    justifyContent={{ base: 'center', md: 'left' }}
+                    justifyContent={{ base: 'center', md: 'center' }}
                   >
                     <Link href={project.github} target='_blank'>
                       <motion.div whileHover={{ scale: 1.2 }}>

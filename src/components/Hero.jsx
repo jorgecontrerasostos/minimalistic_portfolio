@@ -23,15 +23,27 @@ const Hero = () => {
             spacing={4}
             textAlign={['center', 'center', 'left', 'left', 'left', 'left']}
           >
-            <Heading as='h3' fontSize='2em' color='#63372C' mb='-6'>
+            <Heading
+              as='h3'
+              fontSize='2em'
+              color='#279AF1'
+              mb='-6'
+              letterSpacing='tight'
+            >
               Hello I&apos;m Jorge
             </Heading>
-            <Heading as='h2' fontSize='2.5em'>
+            <Heading
+              as='h2'
+              fontSize='2.5em'
+              letterSpacing='tight'
+              lineHeight={{ base: 1, md: 'normal' }}
+            >
               Self taught web developer
             </Heading>
-            <Text>
+            <Text pr={4}>
               Welcome to my corner of the web! Take a look at my work in web
-              development – where creativity meets technical know-how!
+              development, work experience and projects – where creativity meets
+              technical know-how!
             </Text>
             <ButtonGroup
               spacing={4}
@@ -48,14 +60,26 @@ const Hero = () => {
                 href='mailto:jorgecontrerasostos@gmail.com'
                 textDecor='none'
               >
-                <Button colorScheme='facebook'>email me!</Button>
+                <Button
+                  bgColor='#EA526F'
+                  color='#F7F7FF'
+                  _hover={{ bgColor: '#b52d46' }}
+                >
+                  email me!
+                </Button>
               </Link>
               <Link
                 href='https://www.linkedin.com/in/jorge-contreras-ostos/'
                 target='_blank'
                 textDecor='none'
               >
-                <Button colorScheme='linkedin'>let&apos;s connect!</Button>
+                <Button
+                  color='white'
+                  bgColor='#279AF1'
+                  _hover={{ bgColor: '#1d79bf' }}
+                >
+                  let&apos;s connect!
+                </Button>
               </Link>
             </ButtonGroup>
           </Stack>

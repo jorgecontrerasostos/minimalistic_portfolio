@@ -12,11 +12,12 @@ import { toolboxData } from '@/data/toolboxData'
 
 const Toolbox = () => {
   return (
-    <Box>
+    <Box mt={[-2, -2, -2, -4, -4, -4]}>
       <Heading
         as='h2'
         fontSize='1.8em'
         textAlign={['center', 'center', 'center', 'left', 'left', 'left']}
+        letterSpacing='tight'
       >
         My Toolbox
       </Heading>
