@@ -1,14 +1,5 @@
-import React from 'react'
-import {
-  Box,
-  Heading,
-  Grid,
-  GridItem,
-  Text,
-  Divider,
-  VStack
-} from '@chakra-ui/react'
 import { toolboxData } from '@/data/toolboxData'
+import { Box, Grid, GridItem, Heading, VStack } from '@chakra-ui/react'
 
 const Toolbox = () => {
   return (

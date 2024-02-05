@@ -7,16 +7,16 @@ const theme = extendTheme({
     useSystemColorMode: false
   },
   fonts: {
-    heading: `'JetBrains Mono', sans-serif`,
-    body: `'JetBrains Mono', sans-serif`
+    heading: `IBM Plex Sans, Inter, sans-serif`,
+    body: `IBM Plex Sans, Inter, sans-serif`
   },
   colors: {
     light: {
-      background: '#F7F7FF' // Light mode background color
+      background: '#FFFFF' // Light mode background color
     },
     dark: {
       background: 'black', // Dark mode background color
-      overriddenBackground: '#070600' // Override the dark mode background color
+      overriddenBackground: '00000' // Override the dark mode background color
     },
     customSwitchColors: {
       100: '#13B0CF',

@@ -1,10 +1,8 @@
-import React from 'react'
-import { Box, Text, Stack, Icon, Spacer, Divider, Flex } from '@chakra-ui/react'
-import { FaLinkedin } from 'react-icons/fa'
-import { SiBuymeacoffee } from 'react-icons/si'
-import { FaXTwitter } from 'react-icons/fa6'
 import { Link } from '@chakra-ui/next-js'
+import { Box, Divider, Flex, Icon, Spacer, Stack, Text } from '@chakra-ui/react'
 import { motion } from 'framer-motion'
+import { FaLinkedin } from 'react-icons/fa'
+import { FaXTwitter } from 'react-icons/fa6'
 const Footer = () => {
   return (
     <Box as='footer'>
@@ -16,10 +14,7 @@ const Footer = () => {
         align='center'
         spacing={4}
       >
-        <Text align='center'>
-          © 2023 Jorge Contreras. Made with ❤️ all the way from
-          &#x1F1F2;&#x1F1FD;.
-        </Text>
+        <Text align='center'>© 2023 Jorge Contreras &#x1F1F2;&#x1F1FD;</Text>
         <Spacer />
         <Stack direction={'row'} spacing={6} mt={{ base: -4, md: 0 }}>
           <Link

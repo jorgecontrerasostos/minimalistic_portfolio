@@ -1,16 +1,8 @@
-import React from 'react'
-import SwitchColorMode from '../SwitchColorMode'
-import {
-  Box,
-  Flex,
-  Link,
-  Icon,
-  Spacer,
-  HStack,
-  ButtonGroup
-} from '@chakra-ui/react'
+import { Link } from '@chakra-ui/next-js'
+import { Box, ButtonGroup, Flex, HStack, Icon, Spacer } from '@chakra-ui/react'
 import { motion } from 'framer-motion'
 import { FaGithub, FaTerminal } from 'react-icons/fa'
+import SwitchColorMode from '../SwitchColorMode'
 
 const Navbar = () => {
   return (
@@ -24,7 +16,7 @@ const Navbar = () => {
         py={4}
         px={[4, 2, 0, 0, 0, 0]}
       >
-        <Box p='2' display={['flex', 'flex', 'flex', 'flex', 'flex', 'flex']}>
+        <Box p='2' display='flex'>
           <Link href='/'>
             <motion.div whileHover={{ scale: 1.2 }}>
               <Icon as={FaTerminal} boxSize={7} />
@@ -34,17 +26,14 @@ const Navbar = () => {
         <Spacer display={['none', 'none', 'none', 'flex', 'flex', 'flex']} />
         <HStack gap={10}>
           {' '}
-          <ButtonGroup
-            gap='4'
-            display={['flex', 'flex', 'flex', 'flex', 'flex', 'flex']}
-          >
+          <ButtonGroup gap='10' display='flex'>
             <Link href='https://github.com/jorgecontrerasostos' target='_blank'>
               <motion.div whileHover={{ scale: 1.2 }}>
                 <Icon as={FaGithub} boxSize={6} />
               </motion.div>
             </Link>
+            <SwitchColorMode />
           </ButtonGroup>
-          <SwitchColorMode />
         </HStack>
       </Flex>
     </Box>

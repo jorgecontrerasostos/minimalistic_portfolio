@@ -1,5 +1,4 @@
-import React from 'react'
-import { Box, Heading, Stack, Divider, Text } from '@chakra-ui/react'
+import { Box, Heading } from '@chakra-ui/react'
 import Timeline from './Timeline'
 
 const WorkExperience = () => {
