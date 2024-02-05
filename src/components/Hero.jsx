@@ -1,15 +1,14 @@
-import React from 'react'
 import {
-  Heading,
-  Stack,
-  Text,
-  Flex,
   Box,
-  Image,
-  Divider,
-  ButtonGroup,
   Button,
-  Link
+  ButtonGroup,
+  Divider,
+  Flex,
+  Heading,
+  Image,
+  Link,
+  Stack,
+  Text
 } from '@chakra-ui/react'
 
 const IMAGE_PATH = '/profile.jpg'
@@ -23,27 +22,13 @@ const Hero = () => {
             spacing={4}
             textAlign={['center', 'center', 'left', 'left', 'left', 'left']}
           >
-            <Heading
-              as='h3'
-              fontSize='2em'
-              color='#279AF1'
-              mb='-6'
-              letterSpacing='tight'
-            >
-              Hello I&apos;m Jorge
+            <Heading as='h3' fontSize='2em' letterSpacing='tight' mb={-2}>
+              Hello, I&apos;m Jorge
             </Heading>
-            <Heading
-              as='h2'
-              fontSize='2.5em'
-              letterSpacing='tight'
-              lineHeight={{ base: 1, md: 'normal' }}
-            >
-              Self taught web developer
-            </Heading>
+
             <Text pr={4}>
-              Welcome to my corner of the web! Take a look at my work in web
-              development, work experience and projects – where creativity meets
-              technical know-how!
+              Self thaught web developer and currently pursuing a master degree
+              in Data Science. Baseball enthusiast and beer lover.
             </Text>
             <ButtonGroup
               spacing={4}

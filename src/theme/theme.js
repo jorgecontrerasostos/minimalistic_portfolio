@@ -3,7 +3,7 @@ import { mode } from '@chakra-ui/theme-tools'
 
 const theme = extendTheme({
   config: {
-    initialColorMode: 'dark',
+    initialColorMode: 'light',
     useSystemColorMode: false
   },
   fonts: {
@@ -16,7 +16,8 @@ const theme = extendTheme({
     },
     dark: {
       background: 'black', // Dark mode background color
-      overriddenBackground: '00000' // Override the dark mode background color
+      overriddenBackground: '00000',
+      text: 'white'
     },
     customSwitchColors: {
       100: '#13B0CF',
