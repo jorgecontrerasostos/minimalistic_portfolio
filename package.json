@@ -14,11 +14,15 @@
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
     "@fontsource-variable/jetbrains-mono": "^5.0.18",
+    "@sanity/image-url": "^1.0.2",
+    "@sanity/vision": "^3.27.1",
     "framer-motion": "^10.16.4",
     "next": "14.0.0",
     "react": "^18",
+    "react-components": "^0.5.1",
     "react-dom": "^18",
-    "react-icons": "^4.11.0"
+    "react-icons": "^4.11.0",
+    "styled-components": "^6.1.8"
   },
   "devDependencies": {
     "eslint": "^8",
