@@ -1,7 +1,6 @@
 import {
   Box,
   ButtonGroup,
-  Divider,
   Flex,
   Heading,
   Icon,
@@ -20,23 +19,24 @@ const IMAGE_PATH = '/profile.jpg'
 
 const Hero = () => {
   return (
-    <Stack as='section'>
+    <Stack as='section' mb={10}>
       <Flex alignItems='center'>
         <Box flex='1'>
           <Stack
             spacing={4}
             textAlign={['center', 'center', 'left', 'left', 'left', 'left']}
           >
-            <Heading as='h3' fontSize='2em' letterSpacing='tight' mb={-2}>
+            <Heading as='h3' fontSize='1.5em' letterSpacing='tight' mb={-2}>
               Jorge Contreras Ostos
             </Heading>
 
-            <Text pr={4}>
+            <Text pr={4} color='gray.700'>
               Hey there! Welcome to my portfolio. I&apos;m a self-taught web
-              developer diving headfirst into the world of data science with a
-              master&apos;s degree in tow. When I&apos;m not coding, you can
-              find me cheering on my beloved Boston Red Sox or enjoying a beer.
-              Stick around as I showcase some of my info.
+              developer and baseball enthusiast diving headfirst into the world
+              of data science with a master&apos;s degree in tow. When I&apos;m
+              not coding, you can find me, playing MLB The Show, cheering on my
+              beloved Boston Red Sox or enjoying a beer. Stick around as I
+              showcase some of my info.
             </Text>
             <ButtonGroup
               as='div'
@@ -102,7 +102,6 @@ const Hero = () => {
           />
         </Box>
       </Flex>
-      <Divider my={4} borderColor='gray.300' w='100%' />
     </Stack>
   )
 }
