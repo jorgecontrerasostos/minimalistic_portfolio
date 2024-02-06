@@ -1,7 +1,7 @@
 import { Link } from '@chakra-ui/next-js'
 import { Box, ButtonGroup, Flex, HStack, Icon, Spacer } from '@chakra-ui/react'
 import { motion } from 'framer-motion'
-import { FaGithub, FaTerminal } from 'react-icons/fa'
+import { FaTerminal } from 'react-icons/fa'
 import SwitchColorMode from '../SwitchColorMode'
 
 const Navbar = () => {
@@ -27,11 +27,6 @@ const Navbar = () => {
         <HStack gap={10}>
           {' '}
           <ButtonGroup gap='10' display='flex'>
-            <Link href='https://github.com/jorgecontrerasostos' target='_blank'>
-              <motion.div whileHover={{ scale: 1.2 }}>
-                <Icon as={FaGithub} boxSize={6} />
-              </motion.div>
-            </Link>
             <SwitchColorMode />
           </ButtonGroup>
         </HStack>
