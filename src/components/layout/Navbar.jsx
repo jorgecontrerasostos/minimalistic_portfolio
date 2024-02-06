@@ -27,6 +27,9 @@ const Navbar = () => {
         <HStack gap={10}>
           {' '}
           <ButtonGroup gap='10' display='flex'>
+            <Link href='/blog' _hover={{ textDecor: 'none' }}>
+              Blog
+            </Link>
             <Link href='https://github.com/jorgecontrerasostos' target='_blank'>
               <motion.div whileHover={{ scale: 1.2 }}>
                 <Icon as={FaGithub} boxSize={6} />
