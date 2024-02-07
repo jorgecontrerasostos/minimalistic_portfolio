@@ -39,7 +39,9 @@ const WorkExperience = () => {
                 </Link>
               </Flex>
               <Spacer />
-              <Text color='gray.600'>{job.date}</Text>
+              <Text color='gray.600' mt={[-4, -4, -2, 0, 0, 0]}>
+                {job.date}
+              </Text>
             </Flex>
 
             <Text color='gray.700' px={[2, 2, 0]}>
