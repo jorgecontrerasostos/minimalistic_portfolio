@@ -1,7 +1,7 @@
-import { DiJavascript1, DiHtml5, DiCss3 } from 'react-icons/di'
-import { SiChakraui, SiNextdotjs, SiPython } from 'react-icons/si'
-import { FaReact, FaNodeJs } from 'react-icons/fa'
 import { Icon } from '@chakra-ui/react'
+import { DiCss3, DiHtml5, DiJavascript1 } from 'react-icons/di'
+import { FaNodeJs, FaReact } from 'react-icons/fa'
+import { SiNextdotjs } from 'react-icons/si'
 
 const uniqueID = crypto.randomUUID()
 
