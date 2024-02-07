@@ -8,7 +8,7 @@ export const jobs = [
     title: 'Web Services Associate',
     company: 'Justia',
     icon: JustiaIcon,
-    description: `I was offered a this full time position when my internship ended. I'm continuously working on an automation tool to extact the content from old websites and migrate it to newer version as fast as possible preserving the integrity of the content. This tool uses Python as its main language`,
+    description: `I was offered a full time position when my internship ended. I'm continuously working on an automation tool to extact the content from old websites and migrate it to newer version as fast as possible preserving the integrity of the content. This tool uses Python as its main language`,
     date: 'June 2021 - Present',
     link: 'https://www.justia.com/'
   },
