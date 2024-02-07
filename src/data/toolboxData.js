@@ -1,39 +1,52 @@
-import { Icon } from '@chakra-ui/react'
-import { DiCss3, DiHtml5, DiJavascript1 } from 'react-icons/di'
-import { FaNodeJs, FaReact } from 'react-icons/fa'
-import { SiNextdotjs } from 'react-icons/si'
-
-const uniqueID = crypto.randomUUID()
-
 export const toolboxData = [
   {
-    id: uniqueID,
-    name: 'HTML',
-    icon: <Icon as={DiHtml5} boxSize={16} color='#e34c26' />
+    id: 0,
+    name: 'javascript',
+    bg: '#f7df1e'
   },
   {
-    id: uniqueID,
-    name: 'CSS',
-    icon: <Icon as={DiCss3} boxSize={16} color='#264de4' />
+    id: 1,
+    name: 'python',
+    bg: '#2b5b84'
   },
   {
-    id: uniqueID,
-    name: 'JavaScript',
-    icon: <Icon as={DiJavascript1} boxSize={16} color='#f7df1e' />
+    id: 2,
+    name: 'sql',
+    bg: '#e97b00'
   },
   {
-    id: uniqueID,
-    name: 'React',
-    icon: <Icon as={FaReact} boxSize={16} color='#81d8f7' />
+    id: 3,
+    name: 'chakra-ui',
+    bg: '#7fdbca'
   },
   {
-    id: uniqueID,
-    name: 'Node',
-    icon: <Icon as={FaNodeJs} boxSize={16} color='#3c873a' />
+    id: 4,
+    name: 'next-js',
+    bg: 'black'
   },
   {
-    id: uniqueID,
-    name: 'Next JS',
-    icon: <Icon as={SiNextdotjs} boxSize={16} />
+    id: 5,
+    name: 'assertive communication',
+    bg: '#0987a0'
+  },
+  {
+    id: 6,
+    name: 'analytical thinking',
+    bg: '#553c9a'
+  },
+  {
+    id: 7,
+    name: 'time management',
+    bg: '#9b2c2c'
+  },
+  {
+    id: 8,
+    name: 'collaboration',
+    bg: '#9c4221'
+  },
+  {
+    id: 9,
+    name: 'adaptability',
+    bg: '#97266d'
   }
 ]

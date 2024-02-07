@@ -1,3 +1,4 @@
+import { toolboxData } from '@/data/toolboxData'
 import {
   Box,
   Center,
@@ -7,6 +8,10 @@ import {
   Wrap,
   WrapItem
 } from '@chakra-ui/react'
+
+const borderRadius = 'lg'
+const textColor = 'white'
+const padding = 2
 
 const Toolbox = () => {
   return (
@@ -32,56 +37,20 @@ const Toolbox = () => {
             'flex-start'
           ]}
         >
-          <WrapItem>
-            <Code p={2} borderRadius='lg' bg='#f7df1e' color='white'>
-              javascript
-            </Code>
-          </WrapItem>
-          <WrapItem>
-            <Code p={2} borderRadius='lg' bg='#2b5b84' color='white'>
-              python
-            </Code>
-          </WrapItem>
-          <WrapItem>
-            <Code p={2} borderRadius='lg' bg='#e97b00' color='white'>
-              sql
-            </Code>
-          </WrapItem>
-          <WrapItem>
-            <Code p={2} borderRadius='lg' bg='#7fdbca' color='white'>
-              chakra-ui
-            </Code>
-          </WrapItem>
-          <WrapItem>
-            <Code p={2} borderRadius='lg' bg='black' color='white'>
-              next-js
-            </Code>
-          </WrapItem>
-          <WrapItem>
-            <Code p={2} borderRadius='lg' bg='#0987a0' color='white'>
-              assertive communication
-            </Code>
-          </WrapItem>
-          <WrapItem>
-            <Code p={2} borderRadius='lg' bg='#553c9a' color='white'>
-              analytical thinking
-            </Code>
-          </WrapItem>
-          <WrapItem>
-            <Code p={2} borderRadius='lg' bg='#9b2c2c' color='white'>
-              time management
-            </Code>
-          </WrapItem>
-          <WrapItem>
-            <Code p={2} borderRadius='lg' bg='#9c4221' color='white'>
-              collaboration
-            </Code>
-          </WrapItem>
-          <WrapItem>
-            <Code p={2} borderRadius='lg' bg='#97266d' color='white'>
-              adaptability
-            </Code>
-          </WrapItem>
+          {toolboxData.map((e) => {
+            return (
+              <WrapItem key={e.id}>
+                <Code
+                  borderRadius={borderRadius}
+                  p={padding}
+                  color={textColor}
+                  bg={e.bg}
+                >
+                  {e.name}
+                </Code>
+              </WrapItem>
+            )
+          })}
         </Wrap>
       </Box>
       <Center>
