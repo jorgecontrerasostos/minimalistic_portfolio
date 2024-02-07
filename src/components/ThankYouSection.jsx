@@ -1,16 +1,14 @@
-import React from 'react'
 import {
-  ButtonGroup,
-  Center,
-  Heading,
-  Text,
   Button,
+  Center,
   Divider,
-  Link,
   Flex,
-  Stack
+  Heading,
+  Link,
+  Stack,
+  Text,
+  useColorMode
 } from '@chakra-ui/react'
-import { useColorMode } from '@chakra-ui/react'
 
 const ThankYouSection = () => {
   const { colorMode } = useColorMode()
@@ -21,12 +19,11 @@ const ThankYouSection = () => {
 
   return (
     <>
-      <Divider mt={10} borderColor='gray.300' w='100%' />
-      <Center display='column' textAlign='center' py={16}>
-        <Heading as='h2' letterSpacing='tight'>
+      <Center display='column' textAlign='center' my={8}>
+        <Heading as='h2' letterSpacing='tight' fontSize='1.5em'>
           Thank you for visiting my website!
         </Heading>
-        <Text as='p'>
+        <Text as='p' fontSize='16px' textColor='gray.700'>
           You can follow me on my social media below or you can buy me a coffee
           😉. See ya!👋
         </Text>
@@ -79,6 +76,9 @@ const ThankYouSection = () => {
             </Link>
           </Stack>
         </Flex>
+      </Center>
+      <Center>
+        <Divider borderColor='gray.300' w='10%' />
       </Center>
     </>
   )
