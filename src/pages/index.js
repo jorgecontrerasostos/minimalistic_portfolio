@@ -1,9 +1,10 @@
-import Head from 'next/head'
+import Education from '@/components/Education'
 import Hero from '@/components/Hero'
-import WorkExperience from '@/components/WorkExperience'
-import Toolbox from '@/components/Toolbox'
 import Projects from '@/components/Projects'
 import ThankYouSection from '@/components/ThankYouSection'
+import Toolbox from '@/components/Toolbox'
+import WorkExperience from '@/components/WorkExperience'
+import Head from 'next/head'
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
       </Head>
       <Hero />
       <WorkExperience />
+      <Education />
       <Toolbox />
       <Projects />
       <ThankYouSection />

@@ -1,8 +1,6 @@
-import { Link } from '@chakra-ui/next-js'
 import {
   Box,
   Center,
-  Code,
   Divider,
   Flex,
   Heading,
@@ -11,11 +9,14 @@ import {
   Text,
   useColorMode
 } from '@chakra-ui/react'
-import { jobs } from '../data/jobs'
-const WorkExperience = () => {
+
+import { education } from '../data/education'
+
+const Education = () => {
   const { colorMode } = useColorMode()
   const textColor = colorMode === 'light' ? 'gray.800' : 'gray.300'
-  const dateColor = colorMode === 'light' ? 'gray.600' : 'gray.400'
+  const detailsColor = colorMode === 'light' ? 'gray.600' : 'gray.400'
+
   return (
     <>
       <Stack my={8}>
@@ -27,45 +28,39 @@ const WorkExperience = () => {
             letterSpacing='tight'
             mb={2}
           >
-            Work Experience
+            Education
           </Heading>
         </Box>
-        {jobs.map((job) => {
+        {education.map((e) => {
           return (
-            <Stack key={job.id} py={2} direction='column'>
+            <Stack key={e.id} py={2} direction='column'>
               <Flex
                 alignItems='flex-start'
                 gap={2}
                 direction={['column', 'column', 'row', 'row', 'row', 'row']}
                 px={[2, 2, 0]}
               >
-                <Flex gap={4}>
-                  <Heading as='h2' fontSize='1.2em'>
-                    {job.title}
-                  </Heading>
-                  <Link href={job.link} target='_blank' alignItems='flex-end'>
-                    <Code
-                      colorScheme={job.company === 'Justia' ? 'blue' : 'red'}
-                      borderRadius='md'
-                      px={2}
-                    >
-                      {job.company}
-                    </Code>
-                  </Link>
-                </Flex>
+                <Heading as='h2' fontSize='1.2em'>
+                  {e.school}
+                </Heading>
                 <Spacer />
                 <Text
-                  color={dateColor}
+                  color={detailsColor}
                   mt={[-4, -4, -2, 0, 0, 0]}
                   fontSize='15px'
                 >
-                  {job.date}
+                  {e.date}
                 </Text>
               </Flex>
-
-              <Text color={textColor} px={[2, 2, 0]}>
-                {job.description}
-              </Text>
+              <Box px={[2, 2, 0]}>
+                {' '}
+                <Text as='p' textColor={textColor}>
+                  {e.degree} - {e.fieldOfStudy}
+                </Text>
+                <Text as='p' color={detailsColor}>
+                  {e.status}
+                </Text>
+              </Box>
             </Stack>
           )
         })}
@@ -77,4 +72,4 @@ const WorkExperience = () => {
   )
 }
 
-export default WorkExperience
+export default Education
