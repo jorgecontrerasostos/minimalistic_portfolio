@@ -8,10 +8,14 @@ import {
   Heading,
   Spacer,
   Stack,
-  Text
+  Text,
+  useColorMode
 } from '@chakra-ui/react'
 import { jobs } from '../data/jobs'
 const WorkExperience = () => {
+  const { colorMode } = useColorMode()
+  const textColor = colorMode === 'light' ? 'gray.800' : 'gray.300'
+  const dateColor = colorMode === 'light' ? 'gray.600' : 'gray.400'
   return (
     <>
       <Stack my={8}>
@@ -50,12 +54,16 @@ const WorkExperience = () => {
                   </Link>
                 </Flex>
                 <Spacer />
-                <Text color='gray.600' mt={[-4, -4, -2, 0, 0, 0]}>
+                <Text
+                  color={dateColor}
+                  mt={[-4, -4, -2, 0, 0, 0]}
+                  fontSize='15px'
+                >
                   {job.date}
                 </Text>
               </Flex>
 
-              <Text color='gray.700' px={[2, 2, 0]}>
+              <Text color={textColor} px={[2, 2, 0]}>
                 {job.description}
               </Text>
             </Stack>

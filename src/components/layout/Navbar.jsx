@@ -9,16 +9,16 @@ const Navbar = () => {
     <Box w='100%'>
       <Flex
         as='nav'
-        minWidth='max-content'
+        w='100%'
         alignItems='center'
         gap='2'
         justifyContent='space-between'
         py={4}
-        px={[4, 2, 0, 0, 0, 0]}
+        px={[8, 8, 0, 0, 0, 0]}
       >
         <Box p='2' display='flex'>
           <Link href='/'>
-            <motion.div whileHover={{ scale: 1.2 }}>
+            <motion.div whileHover={{ scale: 1.08 }}>
               <Icon as={FaTerminal} boxSize={7} />
             </motion.div>
           </Link>

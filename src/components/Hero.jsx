@@ -9,17 +9,20 @@ import {
   Image,
   Link,
   Stack,
-  Text
+  Text,
+  useColorMode
 } from '@chakra-ui/react'
 import { motion } from 'framer-motion'
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
 import { FaXTwitter } from 'react-icons/fa6'
 import { MdEmail } from 'react-icons/md'
-import { SiBuymeacoffee } from 'react-icons/si'
 
 const IMAGE_PATH = '/profile.jpg'
 
 const Hero = () => {
+  const { colorMode } = useColorMode()
+  const textColor = colorMode === 'light' ? 'gray.800' : 'gray.300'
+
   return (
     <>
       <Stack as='section' mb={10}>
@@ -33,7 +36,7 @@ const Hero = () => {
                 Jorge Contreras Ostos
               </Heading>
 
-              <Text pr={4} color='gray.700'>
+              <Text pr={4} color={textColor}>
                 Hey there! Welcome to my portfolio. I&apos;m a self-taught web
                 developer and baseball enthusiast diving headfirst into the
                 world of data science with a master&apos;s degree in tow. When
@@ -81,14 +84,6 @@ const Hero = () => {
                 >
                   <motion.div whileHover={{ scale: 1.08 }}>
                     <Icon as={MdEmail} boxSize={7} color='#dda15e' />
-                  </motion.div>
-                </Link>
-                <Link
-                  href='https://www.buymeacoffee.com/jorgecontreras'
-                  target='_blank'
-                >
-                  <motion.div whileHover={{ scale: 1.08 }}>
-                    <Icon as={SiBuymeacoffee} boxSize={7} color='#dbcb3b' />
                   </motion.div>
                 </Link>
               </ButtonGroup>

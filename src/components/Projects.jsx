@@ -17,7 +17,7 @@ import { projects } from '../data/projects'
 
 const Projects = () => {
   const { colorMode } = useColorMode()
-  const textColor = colorMode === 'light' ? 'gray.600' : 'gray.500'
+  const textColor = colorMode === 'light' ? 'gray.800' : 'gray.300'
 
   return (
     <>
@@ -37,7 +37,7 @@ const Projects = () => {
               <Stack direction={{ base: 'column', md: 'row' }}>
                 <Flex flex={1} mt={10}>
                   <Link href={project.link} target='_blank'>
-                    <motion.div whileHover={{ scale: 1.03 }}>
+                    <motion.div whileHover={{ scale: 1.02 }}>
                       <Image
                         alt='NASA Photo of the Day Project'
                         objectFit={'cover'}
@@ -65,7 +65,7 @@ const Projects = () => {
                       <Text>{project.name}</Text>
                     </Heading>
 
-                    <Text fontSize='16px' color='gray.700'>
+                    <Text fontSize='16px' color={textColor}>
                       {project.description}
                     </Text>
                     <Stack
@@ -74,12 +74,12 @@ const Projects = () => {
                       justifyContent={{ base: 'center', md: 'center' }}
                     >
                       <Link href={project.github} target='_blank'>
-                        <motion.div whileHover={{ scale: 1.2 }}>
+                        <motion.div whileHover={{ scale: 1.08 }}>
                           <Icon as={BsGithub} boxSize={7} />
                         </motion.div>
                       </Link>
                       <Link href={project.link} target='_blank'>
-                        <motion.div whileHover={{ scale: 1.2 }}>
+                        <motion.div whileHover={{ scale: 1.08 }}>
                           <Icon as={BsArrowUpRightSquare} boxSize={7} />
                         </motion.div>
                       </Link>
@@ -91,7 +91,9 @@ const Projects = () => {
           )
         })}
         <Box textAlign='center' py={6}>
-          <Text as='p'>More projects coming soon...</Text>
+          <Text as='p' color={textColor}>
+            More projects coming soon...
+          </Text>
         </Box>
       </Box>
       <Center>

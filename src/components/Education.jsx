@@ -6,12 +6,17 @@ import {
   Heading,
   Spacer,
   Stack,
-  Text
+  Text,
+  useColorMode
 } from '@chakra-ui/react'
 
 import { education } from '../data/education'
 
 const Education = () => {
+  const { colorMode } = useColorMode()
+  const textColor = colorMode === 'light' ? 'gray.800' : 'gray.300'
+  const detailsColor = colorMode === 'light' ? 'gray.600' : 'gray.400'
+
   return (
     <>
       <Stack my={8}>
@@ -39,16 +44,20 @@ const Education = () => {
                   {e.school}
                 </Heading>
                 <Spacer />
-                <Text color='gray.600' mt={[-4, -4, -2, 0, 0, 0]}>
+                <Text
+                  color={detailsColor}
+                  mt={[-4, -4, -2, 0, 0, 0]}
+                  fontSize='15px'
+                >
                   {e.date}
                 </Text>
               </Flex>
               <Box px={[2, 2, 0]}>
                 {' '}
-                <Text as='p'>
+                <Text as='p' textColor={textColor}>
                   {e.degree} - {e.fieldOfStudy}
                 </Text>
-                <Text as='p' color='gray.600'>
+                <Text as='p' color={detailsColor}>
                   {e.status}
                 </Text>
               </Box>
