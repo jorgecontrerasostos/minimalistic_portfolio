@@ -37,8 +37,8 @@ const Hero = () => {
               </Heading>
 
               <Text pr={4} color={textColor}>
-                Hey there! Welcome to my portfolio. I&apos;m a self-taught web
-                developer and baseball enthusiast diving headfirst into the
+                Hey there! Welcome to my portfolio. I&apos;m a Computer Systems Engineer
+                and baseball enthusiast diving headfirst into the
                 world of data science with a master&apos;s degree in tow. When
                 I&apos;m not coding, you can find me playing MLB The Show,
                 cheering on my beloved Boston Red Sox or enjoying a beer. Stick
