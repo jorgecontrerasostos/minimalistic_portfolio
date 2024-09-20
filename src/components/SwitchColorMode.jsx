@@ -1,15 +1,29 @@
-import { Switch, useColorMode } from '@chakra-ui/react'
+import { MoonIcon, SunIcon } from '@chakra-ui/icons'
+import { IconButton, useColorMode } from '@chakra-ui/react'
 import { motion } from 'framer-motion'
 
 const SwitchColorMode = () => {
   const { colorMode, toggleColorMode } = useColorMode()
+
   return (
     <motion.div whileHover={{ scale: 1.08 }}>
-      <Switch
-        isChecked={colorMode === 'dark'}
-        onChange={toggleColorMode}
+      <IconButton
+        aria-label='Toggle color mode'
+        icon={
+          colorMode === 'dark' ? (
+            <SunIcon color='yellow.400' boxSize={6} />
+          ) : (
+            <MoonIcon color='blue.600' boxSize={6} />
+          )
+        }
+        onClick={toggleColorMode}
         colorScheme='customSwitchColors'
-        boxSize={6}
+        size='lg'
+        isRound
+        bg='transparent' // Transparent background
+        _hover={{ bg: 'transparent' }}
+        _active={{ bg: 'transparent' }}
+        _focus={{ bg: 'transparent' }}
       />
     </motion.div>
   )
