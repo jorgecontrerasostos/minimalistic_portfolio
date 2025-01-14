@@ -13,7 +13,7 @@ const SwitchColorMode = () => {
           colorMode === 'dark' ? (
             <SunIcon color='yellow.400' boxSize={6} />
           ) : (
-            <MoonIcon color='blue.600' boxSize={6} />
+            <MoonIcon color='gray.900' boxSize={6} />
           )
         }
         onClick={toggleColorMode}
