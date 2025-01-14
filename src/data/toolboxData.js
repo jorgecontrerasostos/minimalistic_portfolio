@@ -1,52 +1,52 @@
 export const toolboxData = [
   {
     id: 0,
-    name: "python",
-    bg: "#2b5b84",
-  },
-  {
-    id: 2,
-    name: "sql",
-    bg: "#e97b00",
-  },
-  {
-    id: 3,
-    name: "tableau",
-    bg: "#7fdbca",
+    name: 'python',
+    bg: '#2b5b84'
   },
   {
     id: 1,
-    name: "javascript",
-    bg: "#f7df1e",
+    name: 'javascript',
+    bg: '#f7df1e'
+  },
+  {
+    id: 2,
+    name: 'pyspark',
+    bg: '#e97b00'
+  },
+  {
+    id: 3,
+    name: 'sql',
+    bg: 'black'
   },
   {
     id: 4,
-    name: "next-js",
-    bg: "black",
+    name: 'pandas',
+    bg: '#0987a0'
   },
   {
     id: 5,
-    name: "assertive communication",
-    bg: "#0987a0",
+    name: 'scikit-learn',
+    bg: '#553c9a'
   },
   {
     id: 6,
-    name: "analytical thinking",
-    bg: "#553c9a",
+    name: 'seaborn',
+    bg: '#9b2c2c'
   },
   {
     id: 7,
-    name: "time management",
-    bg: "#9b2c2c",
+    name: 'beautiful-soup',
+    bg: '#9c4221'
   },
   {
     id: 8,
-    name: "collaboration",
-    bg: "#9c4221",
+    name: 'tableau',
+    bg: '#7fdbca'
   },
   {
     id: 9,
-    name: "adaptability",
-    bg: "#97266d",
-  },
-];
+    name: 'power-bi',
+    bg: '#97266d'
+  }
+]
