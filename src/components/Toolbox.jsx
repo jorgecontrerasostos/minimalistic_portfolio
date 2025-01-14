@@ -24,7 +24,7 @@ const Toolbox = () => {
           letterSpacing='tight'
           mb={4}
         >
-          My Toolbox & Soft Skills
+          My Toolbox
         </Heading>
         <Wrap
           py={4}
