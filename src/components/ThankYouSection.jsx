@@ -16,6 +16,7 @@ const ThankYouSection = () => {
   const { colorMode } = useColorMode()
 
   const textColor = colorMode === 'light' ? 'gray.800' : 'gray.300'
+  const iconColor = colorMode === 'light' ? 'gray.800' : 'gray.300'
 
   return (
     <>
@@ -34,7 +35,7 @@ const ThankYouSection = () => {
               target='_blank'
             >
               <motion.div whileHover={{ scale: 1.08 }}>
-                <Icon as={SiBuymeacoffee} boxSize={8} color='#dbcb3b' />
+                <Icon as={SiBuymeacoffee} boxSize={10} color={iconColor} />
               </motion.div>
             </Link>
           </Stack>
