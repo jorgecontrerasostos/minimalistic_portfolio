@@ -34,7 +34,6 @@ const Hero = () => {
               <Heading as='h3' fontSize='1.5em' letterSpacing='tight' mb={-2}>
                 Jorge Contreras Ostos
               </Heading>
-
               <Text pr={4} color={textColor} as='p'>
                 hi! i&apos;m jorge data analyst in progress with a passion for
                 data, machine learning and baseball.
