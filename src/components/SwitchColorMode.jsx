@@ -6,7 +6,7 @@ const SwitchColorMode = () => {
   const { colorMode, toggleColorMode } = useColorMode()
 
   return (
-    <motion.div whileHover={{ scale: 1.08 }}>
+    <motion.div whileHover={{ scale: 1.08, rotate: 180 }}>
       <IconButton
         aria-label='Toggle color mode'
         icon={
