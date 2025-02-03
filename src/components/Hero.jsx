@@ -13,7 +13,6 @@ import {
   useColorMode
 } from '@chakra-ui/react'
 import { motion } from 'framer-motion'
-import { FaXTwitter } from 'react-icons/fa6'
 import { LuGithub, LuLinkedin, LuMail } from 'react-icons/lu'
 
 const IMAGE_PATH = '/profile_2024.jpeg'
@@ -71,14 +70,6 @@ const Hero = () => {
                   >
                     <motion.div whileHover={{ scale: 1.08 }}>
                       <Icon as={LuLinkedin} boxSize={7} color={iconColor} />
-                    </motion.div>
-                  </Link>
-                  <Link
-                    href='https://twitter.com/jorgecontreras'
-                    target='_blank'
-                  >
-                    <motion.div whileHover={{ scale: 1.08 }}>
-                      <Icon as={FaXTwitter} boxSize={7} color={iconColor} />
                     </motion.div>
                   </Link>
                   <Link
