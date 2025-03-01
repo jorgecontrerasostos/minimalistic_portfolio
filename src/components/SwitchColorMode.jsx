@@ -1,29 +1,27 @@
-import { MoonIcon, SunIcon } from '@chakra-ui/icons'
-import { IconButton, useColorMode } from '@chakra-ui/react'
+import { Icon, IconButton, useColorMode } from '@chakra-ui/react'
 import { motion } from 'framer-motion'
+import { LuMoon, LuSun } from 'react-icons/lu'
 
 const SwitchColorMode = () => {
   const { colorMode, toggleColorMode } = useColorMode()
 
   return (
-    <motion.div whileHover={{ scale: 1.08 }}>
+    <motion.div whileHover={{ scale: 1.087, rotate: 180 }}>
       <IconButton
         aria-label='Toggle color mode'
         icon={
           colorMode === 'dark' ? (
-            <SunIcon color='yellow.400' boxSize={6} />
+            <Icon as={LuSun} boxSize={6} color='white' />
           ) : (
-            <MoonIcon color='blue.600' boxSize={6} />
+            <Icon as={LuMoon} boxSize={6} color='black' />
           )
         }
         onClick={toggleColorMode}
         colorScheme='customSwitchColors'
         size='lg'
         isRound
-        bg='transparent' // Transparent background
+        bg='transparent'
         _hover={{ bg: 'transparent' }}
-        _active={{ bg: 'transparent' }}
-        _focus={{ bg: 'transparent' }}
       />
     </motion.div>
   )

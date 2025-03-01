@@ -13,19 +13,17 @@ import {
   useColorMode
 } from '@chakra-ui/react'
 import { motion } from 'framer-motion'
-import { FaGithub, FaLinkedin } from 'react-icons/fa'
-import { FaXTwitter } from 'react-icons/fa6'
-import { MdEmail } from 'react-icons/md'
+import { LuGithub, LuLinkedin, LuMail } from 'react-icons/lu'
 
 const IMAGE_PATH = '/profile_2024.jpeg'
 
 const Hero = () => {
   const { colorMode } = useColorMode()
   const textColor = colorMode === 'light' ? 'gray.800' : 'gray.300'
-
+  const iconColor = colorMode === 'light' ? 'gray.800' : 'gray.300'
   return (
     <>
-      <Stack as='section' mb={10}>
+      <Stack as='section' mb={6}>
         <Flex alignItems='center' direction={['column', 'column', 'row']}>
           <Box flex='1'>
             <Stack
@@ -43,49 +41,47 @@ const Hero = () => {
                 when i&apos;m not working, you can find me watching the Boston
                 Red Sox.
               </Text>
-              <ButtonGroup
-                as='div'
-                spacing={4}
-                justifyContent={[
-                  'center',
-                  'center',
-                  'start',
-                  'start',
-                  'start',
-                  'start'
-                ]}
-              >
-                <Link
-                  href='https://github.com/jorgecontrerasostos'
-                  target='_blank'
+              <Center>
+                <ButtonGroup
+                  as='div'
+                  spacing={4}
+                  justifyContent={[
+                    'center',
+                    'center',
+                    'start',
+                    'start',
+                    'start',
+                    'start'
+                  ]}
+                  pt={2}
                 >
-                  <motion.div whileHover={{ scale: 1.08 }}>
-                    <Icon as={FaGithub} boxSize={6} />
-                  </motion.div>
-                </Link>
-                <Link
-                  href='https://www.linkedin.com/in/jorge-contreras-ostos/'
-                  target='_blank'
-                  textDecor='none'
-                >
-                  <motion.div whileHover={{ scale: 1.08 }}>
-                    <Icon as={FaLinkedin} boxSize={7} color='#0072b1' />
-                  </motion.div>
-                </Link>
-                <Link href='https://twitter.com/jorgecontreras' target='_blank'>
-                  <motion.div whileHover={{ scale: 1.08 }}>
-                    <Icon as={FaXTwitter} boxSize={7} />
-                  </motion.div>
-                </Link>
-                <Link
-                  href='mailto:jorgecontrerasostos@gmail.com'
-                  textDecor='none'
-                >
-                  <motion.div whileHover={{ scale: 1.08 }}>
-                    <Icon as={MdEmail} boxSize={7} color='#dda15e' />
-                  </motion.div>
-                </Link>
-              </ButtonGroup>
+                  <Link
+                    href='https://github.com/jorgecontrerasostos'
+                    target='_blank'
+                  >
+                    <motion.div whileHover={{ scale: 1.08 }}>
+                      <Icon as={LuGithub} boxSize={6} color={iconColor} />
+                    </motion.div>
+                  </Link>
+                  <Link
+                    href='https://www.linkedin.com/in/jorge-contreras-ostos/'
+                    target='_blank'
+                    textDecor='none'
+                  >
+                    <motion.div whileHover={{ scale: 1.08 }}>
+                      <Icon as={LuLinkedin} boxSize={7} color={iconColor} />
+                    </motion.div>
+                  </Link>
+                  <Link
+                    href='mailto:jorgecontrerasostos@gmail.com'
+                    textDecor='none'
+                  >
+                    <motion.div whileHover={{ scale: 1.08 }}>
+                      <Icon as={LuMail} boxSize={7} color={iconColor} />
+                    </motion.div>
+                  </Link>
+                </ButtonGroup>
+              </Center>
             </Stack>
           </Box>
           <Box display={['flex', 'flex', 'flex']} mt={6} order={[1, 1, 0]}>

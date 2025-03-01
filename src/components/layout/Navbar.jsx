@@ -1,7 +1,16 @@
 import { Link } from '@chakra-ui/next-js'
-import { Box, ButtonGroup, Flex, HStack, Icon, Spacer } from '@chakra-ui/react'
+import {
+  Box,
+  ButtonGroup,
+  Link as ChakraLink,
+  Flex,
+  HStack,
+  Icon,
+  Spacer
+} from '@chakra-ui/react'
 import { motion } from 'framer-motion'
-import { FaTerminal } from 'react-icons/fa'
+import { LuTerminal } from 'react-icons/lu'
+
 import SwitchColorMode from '../SwitchColorMode'
 
 const Navbar = () => {
@@ -19,14 +28,22 @@ const Navbar = () => {
         <Box p='2' display='flex'>
           <Link href='/'>
             <motion.div whileHover={{ scale: 1.08 }}>
-              <Icon as={FaTerminal} boxSize={7} />
+              <Icon as={LuTerminal} boxSize={7} />
             </motion.div>
           </Link>
         </Box>
         <Spacer display={['none', 'none', 'none', 'flex', 'flex', 'flex']} />
         <HStack gap={10}>
           {' '}
-          <ButtonGroup gap='10' display='flex'>
+          <ButtonGroup
+            gap='10'
+            display='flex'
+            justifyContent='center'
+            alignItems='center'
+          >
+            <ChakraLink _hover={{ textDecoration: 'none' }} href='/blog'>
+              blog
+            </ChakraLink>
             <SwitchColorMode />
           </ButtonGroup>
         </HStack>
