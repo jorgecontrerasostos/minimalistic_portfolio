@@ -41,7 +41,11 @@ const Navbar = () => {
             justifyContent='center'
             alignItems='center'
           >
-            <ChakraLink _hover={{ textDecoration: 'none' }} href='/blog'>
+            <ChakraLink
+              _hover={{ textDecoration: 'none' }}
+              href='/blog'
+              as={Link}
+            >
               blog
             </ChakraLink>
             <SwitchColorMode />
