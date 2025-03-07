@@ -1,4 +1,11 @@
-import { Box, Link as ChakraLink, Grid, Heading, Text } from '@chakra-ui/react'
+import {
+  Box,
+  Link as ChakraLink,
+  Divider,
+  Grid,
+  Heading,
+  Text
+} from '@chakra-ui/react'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { getSortedPostsData } from '../../utils/mdx'
@@ -35,14 +42,14 @@ const Blog = ({ posts }) => {
       <Heading mb={8}>Blog Posts</Heading>
 
       {/* Latest Post - Bigger Size */}
-      <Box mb={8}>
+      <Box mb={4}>
         <ChakraLink
           as={Link}
           href={`/blog/${slugify(latestPost.title)}`}
           _hover={{ textDecoration: 'none' }}
         >
           <motion.div whileHover={{ scale: 1.02 }}>
-            <Box borderRadius='lg' overflow='hidden' shadow='lg'>
+            <Box>
               <Box p={6}>
                 <Heading size='lg' mb={3}>
                   {latestPost.title}
@@ -58,7 +65,7 @@ const Blog = ({ posts }) => {
           </motion.div>
         </ChakraLink>
       </Box>
-
+      <Divider />
       {/* Remaining Posts Grid */}
       <Grid templateColumns='repeat(1, 1fr)' gap={6}>
         {remainingPosts.map((post) => (
@@ -69,7 +76,7 @@ const Blog = ({ posts }) => {
             _hover={{ textDecoration: 'none' }}
           >
             <motion.div whileHover={{ scale: 1.03 }}>
-              <Box borderRadius='lg' overflow='hidden' shadow='md'>
+              <Box borderRadius='lg' overflow='hidden'>
                 <Box p={4}>
                   <Heading size='md' mb={2}>
                     {post.title}
@@ -81,6 +88,7 @@ const Blog = ({ posts }) => {
                 </Box>
               </Box>
             </motion.div>
+            <Divider />
           </ChakraLink>
         ))}
       </Grid>
