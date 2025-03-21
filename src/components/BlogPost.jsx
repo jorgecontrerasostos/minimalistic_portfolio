@@ -3,6 +3,7 @@ import {
   Code,
   Heading,
   ListItem,
+  OrderedList,
   Text,
   UnorderedList
 } from '@chakra-ui/react'
@@ -12,9 +13,11 @@ const components = {
   h1: (props) => <Heading as='h1' size='2xl' my={4} {...props} />,
   h2: (props) => <Heading as='h2' size='xl' my={4} {...props} />,
   h3: (props) => <Heading as='h3' size='lg' my={3} {...props} />,
+  h4: (props) => <Heading as='h4' size={'md'} my={3} {...props} />,
   p: (props) => <Text my={2} lineHeight='tall' {...props} />,
   ul: (props) => <UnorderedList my={2} {...props} />,
   li: (props) => <ListItem {...props} />,
+  ol: (props) => <OrderedList my={2} {...props} />,
   code: (props) => (
     <Code
       p={2}
@@ -44,7 +47,9 @@ const components = {
 const BlogPost = ({ source, frontMatter }) => {
   return (
     <Box maxW='800px' mx='auto' px={4} py={8}>
-      <Heading mb={4}>{frontMatter.title}</Heading>
+      <Heading mb={4} size='2xl'>
+        {frontMatter.title}
+      </Heading>
       <Text color='gray.600' mb={8}>
         {new Date(frontMatter.date).toLocaleDateString()}
       </Text>

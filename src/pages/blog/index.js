@@ -54,10 +54,10 @@ const Blog = ({ posts }) => {
                 <Heading size='lg' mb={3}>
                   {latestPost.title}
                 </Heading>
-                <Text color='gray.600' fontSize='md' mb={2}>
+                <Text color='gray.600' fontSize='sm' mb={2}>
                   {new Date(latestPost.date).toLocaleDateString()}
                 </Text>
-                <Text fontSize='lg' mt={2}>
+                <Text fontSize='md' mt={2}>
                   {latestPost.description}
                 </Text>
               </Box>
