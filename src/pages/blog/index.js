@@ -1,4 +1,5 @@
 import {
+  Badge, // Added Badge import
   Box,
   Link as ChakraLink,
   Divider,
@@ -38,8 +39,8 @@ const Blog = ({ posts }) => {
   const remainingPosts = posts.slice(1)
 
   return (
-    <Box maxW='1200px' mx='auto' px={4} py={8}>
-      <Heading mb={8}>Blog Posts</Heading>
+    <Box maxW='1200px' mx='auto'>
+      <Heading mb={8}>Blog</Heading>
 
       {/* Latest Post - Bigger Size */}
       <Box mb={4}>
@@ -50,13 +51,20 @@ const Blog = ({ posts }) => {
         >
           <motion.div whileHover={{ scale: 1.02 }}>
             <Box>
-              <Box p={6}>
+              <Box p={[0, 0, 0, 0]} pb={4}>
                 <Heading size='lg' mb={3}>
                   {latestPost.title}
                 </Heading>
-                <Text color='gray.600' fontSize='sm' mb={2}>
-                  {new Date(latestPost.date).toLocaleDateString()}
-                </Text>
+                <Box display='flex' alignItems='center' mb={2}>
+                  <Text color='gray.600' fontSize='sm' mr={3}>
+                    {new Date(latestPost.date).toLocaleDateString()}
+                  </Text>
+                  {latestPost.category && (
+                    <Badge colorScheme='blue' fontSize='xs'>
+                      {latestPost.category}
+                    </Badge>
+                  )}
+                </Box>
                 <Text fontSize='md' mt={2}>
                   {latestPost.description}
                 </Text>
@@ -67,7 +75,7 @@ const Blog = ({ posts }) => {
       </Box>
       <Divider />
       {/* Remaining Posts Grid */}
-      <Grid templateColumns='repeat(1, 1fr)' gap={6}>
+      <Grid templateColumns='repeat(1, 1fr)' gap={6} mt={4}>
         {remainingPosts.map((post) => (
           <ChakraLink
             as={Link}
@@ -77,13 +85,20 @@ const Blog = ({ posts }) => {
           >
             <motion.div whileHover={{ scale: 1.03 }}>
               <Box borderRadius='lg' overflow='hidden'>
-                <Box p={4}>
+                <Box p={0} pb={4}>
                   <Heading size='md' mb={2}>
                     {post.title}
                   </Heading>
-                  <Text color='gray.600' fontSize='sm'>
-                    {new Date(post.date).toLocaleDateString()}
-                  </Text>
+                  <Box display='flex' alignItems='center'>
+                    <Text color='gray.600' fontSize='sm' mr={3}>
+                      {new Date(post.date).toLocaleDateString()}
+                    </Text>
+                    {post.category && (
+                      <Badge colorScheme='blue' fontSize='xs'>
+                        {post.category}
+                      </Badge>
+                    )}
+                  </Box>
                   <Text mt={2}>{post.description}</Text>
                 </Box>
               </Box>
