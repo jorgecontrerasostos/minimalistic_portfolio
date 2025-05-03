@@ -40,7 +40,7 @@ const Blog = ({ posts }) => {
 
   return (
     <Box maxW='1200px' mx='auto'>
-      <Heading mb={8}>Blog</Heading>
+      {/* <Heading mb={8}>Blog</Heading> */}
 
       {/* Latest Post - Bigger Size */}
       <Box mb={4}>
@@ -60,7 +60,16 @@ const Blog = ({ posts }) => {
                     {new Date(latestPost.date).toLocaleDateString()}
                   </Text>
                   {latestPost.category && (
-                    <Badge colorScheme='blue' fontSize='xs'>
+                    <Badge
+                      colorScheme={
+                        latestPost.category === 'Personal'
+                          ? 'green'
+                          : latestPost.category === 'AI'
+                          ? 'orange'
+                          : 'blue'
+                      }
+                      fontSize='xs'
+                    >
                       {latestPost.category}
                     </Badge>
                   )}
