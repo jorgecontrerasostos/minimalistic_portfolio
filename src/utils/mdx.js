@@ -21,7 +21,10 @@ export function getSortedPostsData() {
     // Combine the data with the id
     return {
       id,
-      ...matterResult.data
+      title: matterResult.data.title,
+      date: matterResult.data.date,
+      description: matterResult.data.description || '',
+      category: matterResult.data.category || 'Uncategorized' // Add category with a default
     }
   })
 
