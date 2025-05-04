@@ -1,14 +1,16 @@
 import {
-  Badge, // Added Badge import
+  Badge,
   Box,
   Link as ChakraLink,
   Divider,
+  Flex,
   Grid,
   Heading,
   Text
 } from '@chakra-ui/react'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
+import TranslateButton from '../../components/TranslateButton'
 import { getSortedPostsData } from '../../utils/mdx'
 
 // Add the slugify function
@@ -40,7 +42,10 @@ const Blog = ({ posts }) => {
 
   return (
     <Box maxW='1200px' mx='auto'>
-      {/* <Heading mb={8}>Blog</Heading> */}
+      <Flex justify='space-between' align='center' mb={8}>
+        <Heading>Blog</Heading>
+        <TranslateButton />
+      </Flex>
 
       {/* Latest Post - Bigger Size */}
       <Box mb={4}>
