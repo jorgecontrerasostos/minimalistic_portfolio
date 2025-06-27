@@ -31,7 +31,7 @@ const Projects = () => {
         >
           Projects
         </Heading>
-        {projects.map((project) => {
+        {projects.slice(0, 3).map((project) => {
           return (
             <div key={project.id}>
               <Stack direction={{ base: 'column', md: 'row' }}>
@@ -90,11 +90,6 @@ const Projects = () => {
             </div>
           )
         })}
-        <Box textAlign='center' py={6}>
-          <Text as='p' color={textColor}>
-            More projects coming soon...
-          </Text>
-        </Box>
       </Box>
       <Center>
         <Divider borderColor='gray.300' w='10%' />

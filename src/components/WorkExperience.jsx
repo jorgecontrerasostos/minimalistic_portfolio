@@ -40,9 +40,9 @@ const WorkExperience = () => {
                 px={[2, 2, 0]}
               >
                 <Flex gap={4}>
-                  <Heading as='h2' fontSize='1.2em'>
+                  <Text as='p' fontSize='lg'>
                     {job.title}
-                  </Heading>
+                  </Text>
                   <Link href={job.link} target='_blank' alignItems='flex-end'>
                     <Code
                       colorScheme={job.company === 'Justia' ? 'blue' : 'red'}
@@ -62,10 +62,6 @@ const WorkExperience = () => {
                   {job.date}
                 </Text>
               </Flex>
-
-              <Text color={textColor} px={[2, 2, 0]}>
-                {job.description}
-              </Text>
             </Stack>
           )
         })}

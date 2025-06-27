@@ -1,7 +1,8 @@
 import { Link } from '@chakra-ui/next-js'
-import { Box, ButtonGroup, Flex, HStack, Icon, Spacer } from '@chakra-ui/react'
+import { Box, Link as ChakraLink, Flex, HStack, Icon } from '@chakra-ui/react'
 import { motion } from 'framer-motion'
-import { FaTerminal } from 'react-icons/fa'
+import { LuTerminal } from 'react-icons/lu'
+
 import SwitchColorMode from '../SwitchColorMode'
 
 const Navbar = () => {
@@ -11,25 +12,63 @@ const Navbar = () => {
         as='nav'
         w='100%'
         alignItems='center'
-        gap='2'
-        justifyContent='space-between'
+        justifyContent={[
+          'space-between',
+          'space-between',
+          'space-between',
+          'flex-start'
+        ]}
         py={4}
         px={[8, 8, 0, 0, 0, 0]}
       >
-        <Box p='2' display='flex'>
+        {/* Logo */}
+        <Box>
           <Link href='/'>
             <motion.div whileHover={{ scale: 1.08 }}>
-              <Icon as={FaTerminal} boxSize={7} />
+              <Icon as={LuTerminal} boxSize={7} />
             </motion.div>
           </Link>
         </Box>
-        <Spacer display={['none', 'none', 'none', 'flex', 'flex', 'flex']} />
-        <HStack gap={10}>
-          {' '}
-          <ButtonGroup gap='10' display='flex'>
+
+        {/* Mobile Blog Link (centered) */}
+        <Box
+          display={['block', 'block', 'block', 'none']}
+          position='absolute'
+          left='50%'
+          transform='translateX(-50%)'
+        >
+          <ChakraLink
+            _hover={{ textDecoration: 'none' }}
+            href='/blog'
+            as={Link}
+          >
+            blog
+          </ChakraLink>
+        </Box>
+
+        {/* Desktop Nav Items */}
+        <HStack
+          spacing={8}
+          ml={[0, 0, 0, 'auto']}
+          display={['none', 'none', 'none', 'flex']}
+        >
+          <ChakraLink
+            _hover={{ textDecoration: 'none' }}
+            href='/blog'
+            as={Link}
+          >
+            blog
+          </ChakraLink>
+
+          <Box>
             <SwitchColorMode />
-          </ButtonGroup>
+          </Box>
         </HStack>
+
+        {/* Mobile Color Switch */}
+        <Box display={['block', 'block', 'block', 'none']}>
+          <SwitchColorMode />
+        </Box>
       </Flex>
     </Box>
   )
