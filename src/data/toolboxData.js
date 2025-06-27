@@ -10,14 +10,14 @@ export const toolboxData = [
     bg: '#f7df1e'
   },
   {
-    id: 2,
-    name: 'pyspark',
-    bg: '#e97b00'
-  },
-  {
     id: 3,
     name: 'sql',
     bg: 'black'
+  },
+  {
+    id: 2,
+    name: 'pyspark',
+    bg: '#e97b00'
   },
   {
     id: 4,
@@ -26,12 +26,12 @@ export const toolboxData = [
   },
   {
     id: 5,
-    name: 'scikit-learn',
+    name: 'airflow',
     bg: '#553c9a'
   },
   {
     id: 6,
-    name: 'seaborn',
+    name: 'dbt',
     bg: '#9b2c2c'
   },
   {

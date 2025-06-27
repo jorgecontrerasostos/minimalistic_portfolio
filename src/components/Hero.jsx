@@ -15,7 +15,7 @@ import {
 import { motion } from 'framer-motion'
 import { LuGithub, LuLinkedin, LuMail } from 'react-icons/lu'
 
-const IMAGE_PATH = '/profile_2024.jpeg'
+const IMAGE_PATH = '/anime_profile_600.png'
 
 const Hero = () => {
   const { colorMode } = useColorMode()

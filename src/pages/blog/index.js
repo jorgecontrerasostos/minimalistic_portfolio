@@ -10,7 +10,6 @@ import {
 } from '@chakra-ui/react'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
-import TranslateButton from '../../components/TranslateButton'
 import { getSortedPostsData } from '../../utils/mdx'
 
 // Add the slugify function
@@ -44,7 +43,7 @@ const Blog = ({ posts }) => {
     <Box maxW='1200px' mx='auto'>
       <Flex justify='space-between' align='center' mb={8}>
         <Heading>Blog</Heading>
-        <TranslateButton />
+        {/* <TranslateButton />*/}
       </Flex>
 
       {/* Latest Post - Bigger Size */}
@@ -62,7 +61,12 @@ const Blog = ({ posts }) => {
                 </Heading>
                 <Box display='flex' alignItems='center' mb={2}>
                   <Text color='gray.600' fontSize='sm' mr={3}>
-                    {new Date(latestPost.date).toLocaleDateString()}
+                    {new Date(latestPost.date).toLocaleDateString({
+                      weekday: 'long',
+                      year: 'numeric',
+                      month: 'long',
+                      day: 'numeric'
+                    })}
                   </Text>
                   {latestPost.category && (
                     <Badge

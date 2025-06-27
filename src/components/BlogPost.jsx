@@ -47,11 +47,16 @@ const components = {
 const BlogPost = ({ source, frontMatter }) => {
   return (
     <Box maxW='800px' mx='auto' px={4} py={8}>
-      <Heading mb={4} size='2xl'>
+      <Heading mb={4} size='xl'>
         {frontMatter.title}
       </Heading>
       <Text color='gray.600' mb={8}>
-        {new Date(frontMatter.date).toLocaleDateString()}
+        {new Date(frontMatter.date).toLocaleDateString({
+          weekday: 'long',
+          year: 'numeric',
+          month: 'long',
+          day: 'numeric'
+        })}
       </Text>
       <MDXRemote {...source} components={components} />
     </Box>

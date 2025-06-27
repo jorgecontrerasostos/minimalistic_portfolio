@@ -1,6 +1,16 @@
 export const projects = [
   {
     id: crypto.randomUUID(),
+    name: 'ETL Pipeline Using Airflow, dbt and AWS',
+    description:
+      'This project demonstrates the development of a comprehensive ETL data pipeline for e-commerce analytics, leveraging Apache Airflow for orchestration, dbt for data transformation, and Amazon Web Services (AWS) for cloud infrastructure.',
+    image: '/etl-pipeline.png',
+    github:
+      'https://github.com/jorgecontrerasostos/etl-pipeline-using-airflow-dbt-and-aws',
+    link: 'https://app.hex.tech/01971dd9-d377-7005-80b2-4124e264052b/app/01977166-bc21-700c-8990-f501a4b1c810/latest'
+  },
+  {
+    id: crypto.randomUUID(),
     name: 'Flight Delay Prediction Pipeline Using PySpark',
     description:
       'Utilized PySpark and SQL queries for large-scale data cleaning, feature engineering, and transformation, including handling missing values, indexing categorical variables, and assembling feature vectors for machine learning.',
