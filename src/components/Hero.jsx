@@ -31,7 +31,7 @@ const Hero = () => {
               textAlign={['center', 'center', 'left', 'left', 'left', 'left']}
             >
               <Heading as='h3' fontSize='1.5em' letterSpacing='tight' mb={-2}>
-                Jorge Contreras Ostos
+                Jorge Contreras
               </Heading>
               <Text pr={4} color={textColor} as='p'>
                 hi! i&apos;m jorge data analyst in progress with a passion for
