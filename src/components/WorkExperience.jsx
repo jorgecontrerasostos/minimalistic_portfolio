@@ -1,5 +1,10 @@
 import { Link } from '@chakra-ui/next-js'
 import {
+  Accordion,
+  AccordionButton,
+  AccordionIcon,
+  AccordionItem,
+  AccordionPanel,
   Box,
   Center,
   Code,
@@ -30,41 +35,60 @@ const WorkExperience = () => {
             Work Experience
           </Heading>
         </Box>
-        {jobs.map((job) => {
-          return (
-            <Stack key={job.id} py={2} direction='column'>
-              <Flex
-                alignItems='flex-start'
-                gap={2}
-                direction={['column', 'column', 'row', 'row', 'row', 'row']}
-                px={[2, 2, 0]}
-              >
-                <Flex gap={4}>
-                  <Text as='p' fontSize='lg'>
-                    {job.title}
-                  </Text>
-                  <Link href={job.link} target='_blank' alignItems='flex-end'>
-                    <Code
-                      colorScheme={job.company === 'Justia' ? 'blue' : 'red'}
-                      borderRadius='md'
-                      px={2}
-                    >
-                      {job.company}
-                    </Code>
-                  </Link>
-                </Flex>
-                <Spacer />
-                <Text
-                  color={dateColor}
-                  mt={[-4, -4, -2, 0, 0, 0]}
-                  fontSize='15px'
+        <Accordion allowMultiple>
+          {jobs.map((job) => {
+            return (
+              <AccordionItem key={job.id} border='none'>
+                <AccordionButton
+                  px={[2, 2, 0]}
+                  py={4}
+                  _hover={{ bg: 'none' }}
+                  borderRadius='md'
                 >
-                  {job.date}
-                </Text>
-              </Flex>
-            </Stack>
-          )
-        })}
+                  <Flex
+                    alignItems='flex-start'
+                    gap={2}
+                    direction={['column', 'column', 'row', 'row', 'row', 'row']}
+                    width='100%'
+                  >
+                    <Flex gap={4} alignItems='center'>
+                      <Text as='p' fontSize='lg' textAlign='left'>
+                        {job.title}
+                      </Text>
+                      <Link
+                        href={job.link}
+                        target='_blank'
+                        alignItems='flex-end'
+                      >
+                        <Code
+                          colorScheme={
+                            job.company === 'Justia' ? 'blue' : 'red'
+                          }
+                          borderRadius='md'
+                          px={2}
+                        >
+                          {job.company}
+                        </Code>
+                      </Link>
+                    </Flex>
+                    <Spacer />
+                    <Flex alignItems='center' gap={2}>
+                      <Text as='p' fontSize='sm' color={dateColor}>
+                        {job.date}
+                      </Text>
+                      <AccordionIcon />
+                    </Flex>
+                  </Flex>
+                </AccordionButton>
+                <AccordionPanel px={[2, 2, 0]} pb={4}>
+                  <Text color={textColor} lineHeight='1.6'>
+                    {job.description}
+                  </Text>
+                </AccordionPanel>
+              </AccordionItem>
+            )
+          })}
+        </Accordion>
       </Stack>
       <Center>
         <Divider borderColor='gray.300' w='10%' />
