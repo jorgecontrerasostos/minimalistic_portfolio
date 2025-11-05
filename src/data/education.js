@@ -4,8 +4,8 @@ export const education = [
     school: 'UNIR (Universidad de la Rioja) - México',
     degree: 'Master Degree (M.S.)',
     fieldOfStudy: 'Data Analysis and Visualization',
-    date: '2024 - Present',
-    status: 'Undergraduate'
+    date: '2024 - 2025',
+    status: 'Pending Certificate'
   },
   {
     id: crypto.randomUUID(),

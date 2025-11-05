@@ -3,12 +3,21 @@ import JustiaIcon from '../components/JustiaIcon'
 export const jobs = [
   {
     id: crypto.randomUUID(),
+    title: 'Data Engineer',
+    company: 'Arca Continental',
+    icon: JustiaIcon,
+    description: ``,
+    date: '2025',
+    link: 'https://www.arcacontal.com/en'
+  },
+  {
+    id: crypto.randomUUID(),
 
     title: 'Web Services Associate',
     company: 'Justia',
     icon: JustiaIcon,
     description: `When my internship wrapped up, they offered me a full-time position. I'm still deep into building an automation tool using Python. Its main goal is to quickly pull content from old websites and zap it over to new ones, all while keeping everything perfectly intact. It's a pretty fun project!`,
-    date: 'Present',
+    date: '2025',
     link: 'https://www.justia.com/'
   },
   {
