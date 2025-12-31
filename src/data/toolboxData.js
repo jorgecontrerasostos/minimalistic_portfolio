@@ -6,46 +6,41 @@ export const toolboxData = [
   },
   {
     id: 1,
-    name: 'javascript',
-    bg: '#f7df1e'
-  },
-  {
-    id: 3,
     name: 'sql',
     bg: 'black'
   },
   {
     id: 2,
-    name: 'pyspark',
+    name: 'dbt',
     bg: '#e97b00'
   },
   {
+    id: 3,
+    name: 'dagster',
+    bg: '#553c9a'
+  },
+  {
     id: 4,
-    name: 'pandas',
+    name: 'snowflake',
     bg: '#0987a0'
   },
   {
     id: 5,
-    name: 'airflow',
-    bg: '#553c9a'
-  },
-  {
-    id: 6,
-    name: 'dbt',
+    name: 'azure-devops',
     bg: '#9b2c2c'
   },
   {
-    id: 7,
+    id: 6,
     name: 'beautiful-soup',
     bg: '#9c4221'
   },
   {
-    id: 8,
+    id: 7,
     name: 'tableau',
     bg: '#7fdbca'
   },
   {
-    id: 9,
+    id: 8,
     name: 'power-bi',
     bg: '#97266d'
   }

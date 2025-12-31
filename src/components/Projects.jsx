@@ -62,10 +62,10 @@ const Projects = () => {
                       ]}
                       letterSpacing='tight'
                     >
-                      <Text>{project.name}</Text>
+                      <Text letterSpacing='tight'>{project.name}</Text>
                     </Heading>
 
-                    <Text fontSize='16px' color={textColor}>
+                    <Text fontSize='16px' color={textColor} letterSpacing='tight'>
                       {project.description}
                     </Text>
                     <Stack

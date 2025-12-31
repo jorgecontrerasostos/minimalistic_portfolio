@@ -6,8 +6,8 @@ export const jobs = [
     title: 'Data Engineer',
     company: 'Arca Continental',
     icon: JustiaIcon,
-    description: ``,
-    date: '2025',
+    description: `I'm part of the DataOps Team ensuring that all the development process runs smoothly. From automating dbt builds and deploys using Pipelines in Azure DevOps, to migrating Databricks Projects to Snowflake.`,
+    date: '2025 - Present',
     link: 'https://www.arcacontal.com/en'
   },
   {
@@ -16,8 +16,8 @@ export const jobs = [
     title: 'Web Services Associate',
     company: 'Justia',
     icon: JustiaIcon,
-    description: `When my internship wrapped up, they offered me a full-time position. I'm still deep into building an automation tool using Python. Its main goal is to quickly pull content from old websites and zap it over to new ones, all while keeping everything perfectly intact. It's a pretty fun project!`,
-    date: '2025',
+    description: `When my internship wrapped up, they offered me a full-time position. Helped build and mantain an automation tool using Python. Its main goal was to quickly pull content from old websites and zap it over to new ones, all while keeping everything perfectly intact.`,
+    date: '2021 - 2025',
     link: 'https://www.justia.com/'
   },
   {

@@ -24,8 +24,8 @@ const ThankYouSection = () => {
         <Heading as='h2' letterSpacing='tight' fontSize='1.5em'>
           Thank you for stoping by!
         </Heading>
-        <Text as='p' fontSize='16px' textColor={textColor} mt={2}>
-          if you&apos;d like to support me, feel free to buy me a coffee. see
+        <Text as='p' fontSize='16px' textColor={textColor} mt={2} letterSpacing='tight'>
+          if you&apos;d like to support me feel free to buy me a coffee. see
           ya! 👋.
         </Text>
         <Flex align='center' justify='center'>

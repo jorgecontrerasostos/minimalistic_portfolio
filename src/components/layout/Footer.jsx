@@ -8,8 +8,8 @@ const Footer = () => {
   return (
     <Box as='footer'>
       <Center my={8}>
-        <Text align='center' color={textColor} textAlign='center'>
-          © {new Date().getFullYear()} Jorge Contreras &#x1F1F2;&#x1F1FD;.
+        <Text align='center' color={textColor} textAlign='center' letterSpacing='tight'>
+          © {new Date().getFullYear()} Jorge Contreras &#x1F1F2;&#x1F1FD;
         </Text>
       </Center>
     </Box>

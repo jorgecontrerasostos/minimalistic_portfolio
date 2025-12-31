@@ -52,13 +52,14 @@ const WorkExperience = () => {
                     width='100%'
                   >
                     <Flex gap={4} alignItems='center'>
-                      <Text as='p' fontSize='lg' textAlign='left'>
+                      <Text as='p' fontSize='lg' textAlign='left' letterSpacing='tight'>
                         {job.title}
                       </Text>
                       <Link
                         href={job.link}
                         target='_blank'
                         alignItems='flex-end'
+                        letterSpacing='tight'
                       >
                         <Code
                           colorScheme={
@@ -73,7 +74,7 @@ const WorkExperience = () => {
                     </Flex>
                     <Spacer />
                     <Flex alignItems='center' gap={2}>
-                      <Text as='p' fontSize='sm' color={dateColor}>
+                      <Text as='p' fontSize='sm' color={dateColor} letterSpacing='tight'>
                         {job.date}
                       </Text>
                       <AccordionIcon />
@@ -81,7 +82,7 @@ const WorkExperience = () => {
                   </Flex>
                 </AccordionButton>
                 <AccordionPanel px={[2, 2, 0]} pb={4}>
-                  <Text color={textColor} lineHeight='1.6'>
+                  <Text color={textColor} lineHeight='1.6' letterSpacing='tight'>
                     {job.description}
                   </Text>
                 </AccordionPanel>

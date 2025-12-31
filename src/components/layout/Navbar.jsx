@@ -41,6 +41,7 @@ const Navbar = () => {
             _hover={{ textDecoration: 'none' }}
             href='/blog'
             as={Link}
+            letterSpacing='tight'
           >
             blog
           </ChakraLink>

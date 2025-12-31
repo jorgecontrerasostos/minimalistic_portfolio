@@ -1,4 +1,4 @@
-import { extendTheme } from "@chakra-ui/react"; // Make sure this is included
+import { extendTheme } from "@chakra-ui/react";
 import { mode } from "@chakra-ui/theme-tools";
 
 const theme = extendTheme({
@@ -7,15 +7,15 @@ const theme = extendTheme({
     useSystemColorMode: false,
   },
   fonts: {
-    heading: `IBM Plex Sans, Inter, sans-serif`,
-    body: `IBM Plex Sans, Inter, sans-serif`,
+    heading: `'JetBrains Mono', 'Courier New', monospace`,
+    body: `'JetBrains Mono', 'Courier New', monospace`,
   },
   colors: {
     light: {
-      background: "#FFFFF", // Light mode background color
+      background: "#FFFFF",
     },
     dark: {
-      background: "black", // Dark mode background color
+      background: "black",
       overriddenBackground: "00000",
       text: "white",
     },
@@ -24,7 +24,7 @@ const theme = extendTheme({
       200: "#B2EBF2",
       300: "#80DEEA",
       400: "#4DD0E1",
-      500: "#26C6DA", // This is the key used by default for the colorScheme
+      500: "#26C6DA",
       600: "#00ACC1",
       700: "#0097A7",
       800: "#00838F",

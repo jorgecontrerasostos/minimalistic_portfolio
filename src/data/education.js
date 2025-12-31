@@ -12,7 +12,7 @@ export const education = [
     school: 'Tecnológico Nacional de México Campus Saltillo - México',
     degree: 'Bachelor of Science (B.S.)',
     fieldOfStudy: 'Computational Systems',
-    date: '2017-2021',
+    date: '2017 - 2021',
     status: 'Graduate'
   }
 ]

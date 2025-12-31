@@ -40,7 +40,7 @@ const Education = () => {
                 direction={['column', 'column', 'row', 'row', 'row', 'row']}
                 px={[2, 2, 0]}
               >
-                <Heading as='h2' fontSize='1.2em'>
+                <Heading as='h2' fontSize='1.2em' letterSpacing='tight'>
                   {e.school}
                 </Heading>
                 <Spacer />
@@ -48,16 +48,17 @@ const Education = () => {
                   color={detailsColor}
                   mt={[-4, -4, -2, 0, 0, 0]}
                   fontSize='15px'
+                  letterSpacing='tight'
                 >
                   {e.date}
                 </Text>
               </Flex>
               <Box px={[2, 2, 0]}>
                 {' '}
-                <Text as='p' textColor={textColor}>
+                <Text as='p' textColor={textColor} letterSpacing='tight'>
                   {e.degree} - {e.fieldOfStudy}
                 </Text>
-                <Text as='p' color={detailsColor}>
+                <Text as='p' color={detailsColor} letterSpacing='tight'>
                   {e.status}
                 </Text>
               </Box>
