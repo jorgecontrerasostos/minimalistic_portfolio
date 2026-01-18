@@ -34,12 +34,10 @@ const Hero = () => {
                 Jorge
               </Heading>
               <Text pr={4} color={textColor} letterSpacing='tight' as='p'>
-                hi! i&apos;m jorge, data engineer with a passion for
-                data, machine learning and baseball.
+                Data engineer keen on climate change, sustainability and baseball
               </Text>
               <Text pr={4} color={textColor} as='p'>
-                when i&apos;m not working, you can find me watching the Boston
-                Red Sox.
+                Devoted Boston Red Sox fan since 2005
               </Text>
               <Center>
                 <ButtonGroup

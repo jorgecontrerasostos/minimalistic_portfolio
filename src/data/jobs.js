@@ -6,7 +6,7 @@ export const jobs = [
     title: 'Data Engineer',
     company: 'Arca Continental',
     icon: JustiaIcon,
-    description: `I'm part of the DataOps Team ensuring that all the development process runs smoothly. From automating dbt builds and deploys using Pipelines in Azure DevOps, to migrating Databricks Projects to Snowflake.`,
+    description: `I'm member of the DataOps Team ensuring that all data operations processes run smoothly.`,
     date: '2025 - Present',
     link: 'https://www.arcacontal.com/en'
   },

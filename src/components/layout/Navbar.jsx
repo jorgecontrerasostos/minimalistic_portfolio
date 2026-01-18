@@ -37,14 +37,6 @@ const Navbar = () => {
           left='50%'
           transform='translateX(-50%)'
         >
-          <ChakraLink
-            _hover={{ textDecoration: 'none' }}
-            href='/blog'
-            as={Link}
-            letterSpacing='tight'
-          >
-            blog
-          </ChakraLink>
         </Box>
 
         {/* Desktop Nav Items */}
@@ -53,13 +45,6 @@ const Navbar = () => {
           ml={[0, 0, 0, 'auto']}
           display={['none', 'none', 'none', 'flex']}
         >
-          <ChakraLink
-            _hover={{ textDecoration: 'none' }}
-            href='/blog'
-            as={Link}
-          >
-            blog
-          </ChakraLink>
 
           <Box>
             <SwitchColorMode />
